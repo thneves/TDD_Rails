@@ -4,8 +4,8 @@ RSpec.describe Customer, type: :model do
   fixtures :customers
 
   it 'creates a customer' do
-    customer = customers(:rooney)
+    customer = create(:customer)
 
-    expect(customer.great_player).to eq "Wayne Rooney was a great player"
+    expect(customer.great_player).to eq "#{customer.name} was a great player"
   end
 end
