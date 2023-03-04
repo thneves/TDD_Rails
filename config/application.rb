@@ -34,7 +34,8 @@ module TDDRails
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.regenators do |g|
+    config.generators do |g|
+      g.test_framework :rspec,
       fixtures: false,
       view_specs: false,
       helper_specs: false,
